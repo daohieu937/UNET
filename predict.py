@@ -54,10 +54,10 @@ def get_args():
                         help='Filenames of output images')
     parser.add_argument('--viz','-v', action='store_true',
                         help='Visualize the images as they are processed')
-    parser.add_argument('--no -save', '-n', action='store_true',
+    parser.add_argument('--no-save', '-n', action='store_true',
                         help='Do not save the output masks', default=False)
     parser.add_argument('--mask-threshold','-t',type=float,\
-                        help='Minimum probability value to consider a mask pixel white')
+                        help='Minimum probability value to consider a mask pixel white', default=0.5)
     parser.add_argument('--scale','-s', type=float,
                         help='Scale factor for the input images', default=0.5)
     return parser.parse_args()
